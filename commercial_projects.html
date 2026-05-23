@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Commercial Interior Projects | Expert House Design</title>
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- SWIPER -->
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<style>
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+:root{
+
+  --gold:#c9a84c;
+  --gold2:#f5d77d;
+
+  --dark:#050505;
+  --d1:#111111;
+
+  --g1:#ffffff;
+  --g2:#cfcfcf;
+  --g3:#8a8a8a;
+
+  --font-display:'Cormorant Garamond',serif;
+
+}
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+body::before{
+
+  content:'';
+
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,rgba(201,168,76,0.05),transparent 35%),
+  radial-gradient(circle at bottom left,rgba(201,168,76,0.04),transparent 30%);
+
+  z-index:-1;
+
+}
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+.container{
+  width:min(1200px,90%);
+  margin:auto;
+}
+
+section{
+  padding:110px 0;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+
+  position:fixed;
+  top:0;
+  width:100%;
+
+  z-index:999;
+
+  background:rgba(0,0,0,0.45);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+
+}
+
+.nav-wrap{
+
+  width:min(1200px,90%);
+  margin:auto;
+
+  height:85px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+}
+
+.logo img{
+  width:75px;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+
+  color:var(--g2);
+
+  text-decoration:none;
+
+  transition:0.3s;
+
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.btn{
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 32px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  transition:0.35s;
+
+}
+
+.btn-gold{
+
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+  color:black;
+
+  font-weight:700;
+
+}
+
+.btn-gold:hover{
+  transform:translateY(-4px);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+  min-height:75vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding-top:120px;
+
+}
+
+.hero .container{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+
+.hero-logo{
+
+  width:180px;
+
+  margin-bottom:2rem;
+
+}
+
+.hero-tag{
+
+  display:flex;
+  align-items:center;
+  gap:1rem;
+
+  margin-bottom:2rem;
+
+}
+
+.hero-tag span{
+
+  width:60px;
+  height:1px;
+
+  background:var(--gold);
+
+}
+
+.hero-tag p{
+
+  color:var(--gold2);
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-size:0.8rem;
+
+}
+
+.hero h1{
+
+  font-size:5rem;
+
+  line-height:0.95;
+
+  margin-bottom:1.5rem;
+
+}
+
+.hero h1 em{
+
+  color:var(--gold2);
+
+  font-style:normal;
+
+}
+
+.hero-desc{
+
+  max-width:700px;
+
+  color:var(--g2);
+
+  line-height:1.9;
+
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:5rem;
+
+}
+
+.section-title h2{
+
+  font-size:4rem;
+
+  margin-bottom:1rem;
+
+}
+
+.section-title p{
+
+  color:var(--g3);
+
+  line-height:1.8;
+
+}
+
+/* ========================= */
+/* PROJECT */
+/* ========================= */
+
+.project-block{
+
+  margin-bottom:8rem;
+
+}
+
+.project-info{
+
+  text-align:center;
+
+  margin-bottom:3rem;
+
+}
+
+.project-info h3{
+
+  font-size:3rem;
+
+  margin-bottom:1rem;
+
+}
+
+.project-info p{
+
+  max-width:760px;
+
+  margin:auto;
+
+  color:var(--g2);
+
+  line-height:1.9;
+
+}
+
+/* ========================= */
+/* SWIPER */
+/* ========================= */
+
+.swiper{
+
+  width:100%;
+  height:580px;
+
+  overflow:hidden;
+
+  border-radius:14px;
+
+  margin-bottom:2rem;
+
+}
+
+.swiper-slide img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:0.6s;
+
+}
+
+.swiper-slide img:hover{
+
+  transform:scale(1.03);
+
+}
+
+/* ========================= */
+/* VIDEO GRID */
+/* ========================= */
+
+.video-grid{
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:2rem;
+
+  margin-bottom:2rem;
+
+}
+
+.video-grid video{
+
+  width:100%;
+
+  border-radius:12px;
+
+}
+
+/* ========================= */
+/* VIDEO SECTION */
+/* ========================= */
+
+.final-video{
+
+  margin-top:5rem;
+
+}
+
+.final-video video{
+
+  width:100%;
+
+  border-radius:14px;
+
+}
+
+/* ========================= */
+/* SWIPER BUTTONS */
+/* ========================= */
+
+.swiper-button-next,
+.swiper-button-prev{
+
+  color:white;
+
+}
+
+.swiper-pagination-bullet{
+  background:white;
+}
+
+.swiper-pagination-bullet-active{
+  background:var(--gold);
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.cta-box{
+
+  background:var(--d1);
+
+  padding:5rem;
+
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+}
+
+.cta-box h2{
+
+  font-size:4rem;
+
+  margin-bottom:1.5rem;
+
+}
+
+.cta-box p{
+
+  max-width:700px;
+
+  margin:auto;
+
+  color:var(--g2);
+
+  line-height:2;
+
+  margin-bottom:2rem;
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+  padding:2rem;
+
+  text-align:center;
+
+  color:var(--g3);
+
+  border-top:1px solid rgba(255,255,255,0.05);
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:1000px){
+
+  .hero h1,
+  .section-title h2,
+  .cta-box h2{
+
+    font-size:3rem;
+
+  }
+
+  .project-info h3{
+    font-size:2.2rem;
+  }
+
+  .swiper{
+    height:320px;
+  }
+
+  .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-logo{
+    width:140px;
+  }
+
+}
+
+/* ========================= */
+/* VIDEO WRAPPER */
+/* ========================= */
+
+.video-wrapper{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:16px;
+
+}
+
+.video-wrapper video{
+
+width:100%;
+
+display:block;
+
+border-radius:16px;
+
+object-fit:cover;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.5);
+
+}
+
+/* ========================= */
+/* PLAY BUTTON */
+/* ========================= */
+
+.play-btn{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:clamp(55px,8vw,90px);
+height:clamp(55px,8vw,90px);
+
+border-radius:50%;
+
+background:rgba(201,168,76,0.9);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:clamp(1.3rem,3vw,2.2rem);
+
+color:black;
+
+z-index:5;
+
+backdrop-filter:blur(10px);
+
+transition:0.4s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.4);
+
+cursor:pointer;
+
+}
+
+.play-btn:hover{
+
+transform:translate(-50%,-50%) scale(1.1);
+
+background:var(--gold2);
+
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+<div class="nav-wrap">
+
+<a href="expert_house.html" class="logo">
+
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png">
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="interior.html">Interior</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<a href="#contact" class="btn btn-gold">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png"
+class="hero-logo">
+
+<div class="hero-tag">
+
+<span></span>
+
+<p>Commercial Interior</p>
+
+<span></span>
+
+</div>
+
+<h1>
+
+Luxury Commercial<br>
+
+<em>Interior Projects</em>
+
+</h1>
+
+<p class="hero-desc">
+
+Explore premium commercial spaces
+crafted for modern business experiences,
+luxury branding, and elegant functionality.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Commercial Portfolio</h2>
+
+<p>
+
+Modern commercial interior projects
+designed for premium customer experiences.
+
+</p>
+
+</div>
+
+<!-- ========================= -->
+<!-- SHOWROOM -->
+<!-- ========================= -->
+
+<div class="project-block">
+
+<div class="project-info">
+
+<h3>Showroom Optical</h3>
+
+<p>
+
+Luxury retail experience store crafted
+with premium product presentation,
+modern lighting, and elegant interiors.
+
+</p>
+
+</div>
+
+<div class="swiper showroomSwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659561/SOUMYA_OPTICALS_EXPERIENCE_STORE_TEST_RENDER_3.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659560/SOUMYA_OPTICALS_EXPERIENCE_STORE_TEST_RENDER_4.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659560/SOUMYA_OPTICALS_EXPERIENCE_STORE_TEST_RENDER_2_1.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659560/SOUMYA_OPTICALS_EXPERIENCE_STORE_TEST_RENDER_2.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659560/SOUMYA_OPTICALS_EXPERIENCE_STORE_TEST_RENDER_5.png">
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- RESTAURANT -->
+<!-- ========================= -->
+
+<div class="project-block">
+
+<div class="project-info">
+
+<h3>Restaurant Interior</h3>
+
+<p>
+
+Elegant hospitality interiors designed
+for premium dining experiences,
+modern ambiance, and luxury aesthetics.
+
+</p>
+
+</div>
+
+<div class="swiper restaurantSwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660017/RENDER_1.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659986/RENDER_2.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659985/RENDER_3.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659985/RENDER_5.png">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778659985/RENDER_6.png">
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- OFFICE -->
+<!-- ========================= -->
+
+<div class="project-block">
+
+<div class="project-info">
+
+<h3>Office Interior</h3>
+
+<p>
+
+Modern office spaces designed
+for productivity, premium aesthetics,
+and professional work environments.
+
+</p>
+
+</div>
+
+<!-- OFFICE SLIDER -->
+
+<div class="swiper officeSwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660328/OFFICE_VIEW_1_copy.jpg.jpg">
+</div>
+        
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660370/OFFICE_VIEW_2_copy.jpg.jpg">
+</div>
+            
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660368/OFFICE_VIEW_3_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660369/OFFICE_VIEW_4_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660367/OFFICE_VIEW_5_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660368/OFFICE_VIEW_6_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660365/OFFICE_VIEW_8_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660753/OFFICE_VIEW_9_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660661/OFFICE_VIEW_10_copy.jpg.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660639/OFFICE_VIEW_11_copy.jpg_1.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778660639/OFFICE_VIEW_12_copy.jpg.jpg">
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- FINAL VIDEO -->
+<!-- ========================= -->
+
+<div class="project-block final-video">
+
+<div class="project-info">
+
+<h3>Restaurant Walkthrough</h3>
+
+<p>
+
+Cinematic commercial walkthrough
+showcasing modern hospitality
+and premium interior experiences.
+
+</p>
+
+<div class="video-wrapper">
+
+<div class="play-btn">
+
+▶
+
+</div>
+
+<video
+controls
+poster="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779347718/exp_re.png">
+
+<source
+src="https://res.cloudinary.com/dc5thzlfx/video/upload/v1779361038/walkthrough_commercial_1_1.mov"
+type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+
+Let's Design Your<br>
+
+<em style="color:var(--gold2);font-style:normal;">
+Commercial Space
+</em>
+
+</h2>
+
+<p>
+
+Transform your commercial environment
+with luxury interior concepts
+crafted by Expert House Design.
+
+</p>
+
+<a href="https://wa.me/919109404905"
+class="btn btn-gold">
+
+Start Project on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+© 2026 Expert House Design · All Rights Reserved
+
+</footer>
+
+<!-- SWIPER JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+const swipers = document.querySelectorAll('.swiper');
+
+swipers.forEach((swiperEl)=>{
+
+new Swiper(swiperEl,{
+
+loop:true,
+
+spaceBetween:20,
+
+autoplay:{
+delay:3000,
+disableOnInteraction:false,
+},
+
+pagination:{
+el:swiperEl.querySelector('.swiper-pagination'),
+clickable:true,
+},
+
+navigation:{
+nextEl:swiperEl.querySelector('.swiper-button-next'),
+prevEl:swiperEl.querySelector('.swiper-button-prev'),
+},
+
+});
+
+});
+
+</script>
+
+<script>
+
+const video = document.querySelector(".video-wrapper video");
+
+const playBtn = document.querySelector(".play-btn");
+
+playBtn.addEventListener("click",()=>{
+
+video.play();
+
+playBtn.style.display="none";
+
+});
+
+video.addEventListener("pause",()=>{
+
+playBtn.style.display="flex";
+
+});
+
+video.addEventListener("play",()=>{
+
+playBtn.style.display="none";
+
+});
+
+</script>
+
+</body>
+</html>

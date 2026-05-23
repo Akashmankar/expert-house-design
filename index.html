@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expert House Design</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+
+<style>
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+:root{
+
+  --gold:#c9a84c;
+  --gold2:#f5d77d;
+
+  --dark:#050505;
+  --d1:#111111;
+  --d2:#1a1a1a;
+
+  --g1:#ffffff;
+  --g2:#cfcfcf;
+  --g3:#8a8a8a;
+
+  --font-display:'Cormorant Garamond',serif;
+
+}
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000;
+  color:white;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+body::before{
+
+  content:'';
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,rgba(201,168,76,0.06),transparent 35%),
+  radial-gradient(circle at bottom left,rgba(201,168,76,0.04),transparent 30%);
+
+  pointer-events:none;
+  z-index:-1;
+
+}
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+.container{
+  width:min(1200px,90%);
+  margin:auto;
+}
+
+section{
+  padding:180px 0 120px;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:999;
+
+  background:rgba(0,0,0,0.45);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+
+}
+
+.nav-wrap{
+
+  width:min(1200px,90%);
+  margin:auto;
+
+  height:85px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+}
+
+.logo img{
+  width:75px;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+
+  color:var(--g2);
+
+  text-decoration:none;
+
+  position:relative;
+
+  transition:0.3s;
+
+}
+
+.nav-links a::after{
+
+  content:'';
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:1px;
+
+  background:var(--gold);
+
+  transition:0.3s;
+
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.btn{
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 32px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  transition:0.35s;
+
+  cursor:pointer;
+
+}
+
+.btn-gold{
+
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+  color:black;
+
+  font-weight:700;
+
+}
+
+.btn-gold:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 12px 30px rgba(201,168,76,0.25);
+
+}
+
+.btn-ghost{
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  color:white;
+
+}
+
+.btn-ghost:hover{
+
+  border-color:var(--gold);
+
+  background:rgba(255,255,255,0.03);
+
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+}
+
+.hero .container{
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+
+.hero-main-logo{
+
+  width:230px;
+
+  margin-bottom:2rem;
+
+  animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+.hero-tag{
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:1rem;
+
+  margin-bottom:2rem;
+
+}
+
+.hero-tag span{
+
+  width:60px;
+  height:1px;
+
+  background:var(--gold);
+
+}
+
+.hero-tag p{
+
+  color:var(--gold2);
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-size:0.8rem;
+
+}
+
+.hero h1{
+
+  font-size:6rem;
+
+  line-height:0.92;
+
+  margin-bottom:2rem;
+
+}
+
+.hero h1 em{
+
+  color:var(--gold2);
+
+  font-style:normal;
+
+}
+
+.hero-desc{
+
+  max-width:760px;
+
+  color:var(--g2);
+
+  line-height:2;
+
+  font-size:1.05rem;
+
+}
+
+.hero-btns{
+
+  display:flex;
+  gap:1rem;
+
+  justify-content:center;
+
+  margin-top:3rem;
+
+}
+
+/* ========================= */
+/* SERVICES */
+/* ========================= */
+
+.services{
+
+padding:180px 0;
+
+background:#000;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* BACKGROUND GLOW */
+
+.services::before{
+
+content:'';
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+background:rgba(201,168,76,.06);
+
+filter:blur(140px);
+
+border-radius:50%;
+
+top:-250px;
+right:-250px;
+
+pointer-events:none;
+
+}
+
+/* ========================= */
+/* HEADING */
+/* ========================= */
+
+.section-heading{
+
+text-align:center;
+
+margin-bottom:5rem;
+
+}
+
+.section-heading p{
+
+color:var(--gold2);
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+margin-bottom:1rem;
+
+}
+
+.section-heading h2,
+.section-title h2{
+
+font-size:clamp(3rem,7vw,5.5rem);
+
+line-height:.95;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+}
+
+/* ========================= */
+/* SECTION TITLE (About, etc.) */
+/* ========================= */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:3rem;
+
+}
+
+.section-title p{
+
+color:var(--gold2);
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+margin-bottom:1rem;
+
+}
+
+/* ========================= */
+/* GRID */
+/* ========================= */
+
+.services-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+
+gap:2rem;
+
+}
+
+/* ========================= */
+/* SERVICE CARD */
+/* ========================= */
+
+.service-card{
+
+position:relative;
+
+height:720px;
+
+overflow:hidden;
+
+border-radius:32px;
+
+cursor:pointer;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.45),
+0 0 0 rgba(201,168,76,0);
+
+transition:
+transform .7s ease,
+box-shadow .7s ease,
+border-color .7s ease;
+
+isolation:isolate;
+
+}
+
+.service-card::before{
+
+content:'';
+
+position:absolute;
+inset:0;
+
+border-radius:32px;
+
+padding:1px;
+
+background:linear-gradient(
+135deg,
+rgba(201,168,76,.9),
+rgba(245,215,125,.18),
+transparent,
+rgba(201,168,76,.55)
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:.55;
+
+transition:.7s;
+
+z-index:5;
+
+pointer-events:none;
+
+}
+
+.service-card::after{
+
+content:'';
+
+position:absolute;
+
+width:280px;
+height:280px;
+
+background:rgba(201,168,76,.18);
+
+filter:blur(100px);
+
+border-radius:50%;
+
+top:-100px;
+right:-100px;
+
+opacity:0;
+
+transition:1s ease;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+.service-card img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:
+transform 1.4s ease,
+filter 1s ease;
+
+filter:
+brightness(.65)
+contrast(1.05)
+saturate(1.05);
+
+}
+
+.service-card:hover{
+
+transform:
+translateY(-12px)
+scale(1.01);
+
+border-color:rgba(201,168,76,.35);
+
+box-shadow:
+0 0 45px rgba(201,168,76,.14),
+0 35px 90px rgba(0,0,0,.75);
+
+}
+
+.service-card:hover::before{
+opacity:1;
+}
+
+.service-card:hover::after{
+opacity:1;
+}
+
+.service-card:hover img{
+
+transform:scale(1.08);
+
+filter:
+brightness(.45)
+contrast(1.1)
+saturate(1.1);
+
+}
+
+.service-overlay{
+
+position:absolute;
+inset:0;
+
+padding:3rem;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.92),
+rgba(0,0,0,.18),
+transparent
+);
+
+z-index:2;
+
+}
+
+.service-overlay h3{
+
+font-size:3.2rem;
+
+margin-bottom:1rem;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+line-height:1;
+
+text-shadow:
+0 5px 20px rgba(0,0,0,.45);
+
+}
+
+.service-overlay p{
+
+max-width:500px;
+
+line-height:1.9;
+
+color:rgba(255,255,255,.76);
+
+margin-bottom:2rem;
+
+font-size:.98rem;
+
+}
+
+.exp-btn{
+
+display:inline-flex;
+align-items:center;
+gap:1rem;
+
+color:white;
+
+text-decoration:none;
+
+font-size:.95rem;
+
+letter-spacing:1px;
+
+transition:.4s;
+
+width:max-content;
+
+}
+
+.exp-btn span{
+
+width:70px;
+height:1px;
+
+background:var(--gold);
+
+transition:.4s;
+
+}
+
+.exp-btn:hover span{
+width:110px;
+}
+
+.exp-btn:hover{
+color:var(--gold2);
+}
+
+@media(max-width:1000px){
+
+.services{
+padding:100px 0;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.service-card{
+height:520px;
+}
+
+.service-overlay{
+padding:2rem;
+}
+
+.service-overlay h3{
+font-size:2.5rem;
+}
+
+.section-heading{
+margin-bottom:3rem;
+}
+
+}
+
+/* ========================= */
+/* ABOUT SECTION */
+/* ========================= */
+
+.about-section{
+
+position:relative;
+
+padding:140px 0;
+
+background:#050505;
+
+overflow:hidden;
+
+}
+
+/* ========================= */
+/* GLOW */
+/* ========================= */
+
+.about-section::before{
+
+content:'';
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+background:rgba(201,168,76,.05);
+
+filter:blur(150px);
+
+border-radius:50%;
+
+top:-300px;
+left:-300px;
+
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.about-container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+animation:fadeUp 1.5s ease;
+
+}
+
+/* ========================= */
+/* SMALL TAG */
+/* ========================= */
+
+.about-tag{
+
+display:inline-block;
+
+font-size:.75rem;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+color:#c9a84c;
+
+margin-bottom:1.2rem;
+
+position:relative;
+
+}
+
+/* GOLD LINE */
+
+.about-tag::after{
+
+content:'';
+
+position:absolute;
+
+left:50%;
+bottom:-12px;
+
+transform:translateX(-50%);
+
+width:80px;
+height:1px;
+
+background:#c9a84c;
+
+}
+
+/* ========================= */
+/* HUGE BG TEXT */
+/* ========================= */
+
+.about-bg-text{
+
+position:absolute;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:clamp(8rem,25vw,22rem);
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:600;
+
+color:rgba(255,255,255,.03);
+
+pointer-events:none;
+
+user-select:none;
+
+letter-spacing:10px;
+
+z-index:-1;
+
+}
+
+/* ========================= */
+/* HEADING */
+/* ========================= */
+
+.about-heading{
+
+font-size:clamp(3rem,7vw,6.5rem);
+
+line-height:.92;
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:600;
+
+color:white;
+
+margin-bottom:2rem;
+
+}
+
+/* GOLD TEXT */
+
+.about-heading span{
+
+color:#c9a84c;
+
+}
+
+/* ========================= */
+/* DESCRIPTION */
+/* ========================= */
+
+.about-description{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:1rem;
+
+line-height:2.1;
+
+color:rgba(255,255,255,.65);
+
+margin-bottom:3rem;
+
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.about-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:1rem;
+
+padding:1rem 2.2rem;
+
+border:1px solid rgba(201,168,76,.45);
+
+text-decoration:none;
+
+color:white;
+
+font-size:.85rem;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+transition:.5s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* BUTTON LINE */
+
+.about-btn span{
+
+width:45px;
+height:1px;
+
+background:#c9a84c;
+
+transition:.5s ease;
+
+}
+
+/* HOVER */
+
+.about-btn:hover{
+
+background:#c9a84c;
+
+color:black;
+
+box-shadow:
+0 0 30px rgba(201,168,76,.18);
+
+}
+
+.about-btn:hover span{
+
+background:black;
+
+width:60px;
+
+}
+
+/* ========================= */
+/* FADE ANIMATION */
+/* ========================= */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.about-section{
+
+padding:100px 0;
+
+}
+
+.about-bg-text{
+
+font-size:7rem;
+
+}
+
+.about-heading{
+
+font-size:3.2rem;
+
+}
+
+.about-description{
+
+font-size:.92rem;
+
+line-height:1.9;
+
+}
+
+.about-btn{
+
+padding:.9rem 1.6rem;
+
+font-size:.75rem;
+
+}
+
+}
+
+
+/* ========================= */
+/* OWNER SECTION */
+/* ========================= */
+
+.owner-section{
+
+padding:80px 0;
+
+background:#050505;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+/* GLOW */
+
+.owner-section::before{
+
+content:'';
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:rgba(201,168,76,.06);
+
+filter:blur(120px);
+
+border-radius:50%;
+
+top:-200px;
+right:-200px;
+
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.owner-container{
+
+width:min(1320px,92%);
+margin:auto;
+
+position:relative;
+
+min-height:500px;
+
+}
+
+/* ========================= */
+/* OWNER ITEM */
+/* ========================= */
+
+.owner-item{
+
+position:absolute;
+inset:0;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+background:#0b0b0b;
+
+border-radius:28px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.06);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.45);
+
+opacity:0;
+visibility:hidden;
+
+transform:
+translateY(30px)
+scale(.98);
+
+transition:
+opacity 1s ease,
+transform 1s ease,
+visibility 1s;
+
+}
+
+.owner-item{
+
+will-change:
+opacity,
+transform;
+
+}
+
+/* ACTIVE */
+
+.owner-item.active{
+
+opacity:1;
+visibility:visible;
+
+transform:
+translateY(0)
+scale(1);
+
+z-index:2;
+
+}
+
+/* REVERSE */
+
+.owner-item.reverse{
+
+direction:rtl;
+
+}
+
+.owner-item.reverse .owner-content{
+
+direction:ltr;
+
+}
+
+/* ========================= */
+/* CONTENT */
+/* ========================= */
+
+.owner-content{
+
+padding:3rem;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+
+height:100%;
+
+}
+
+/* TAG */
+
+.owner-tag{
+
+font-size:.72rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:#f5d77d;
+
+margin-bottom:1rem;
+
+}
+
+/* NAME */
+
+.owner-content h2{
+
+font-size:clamp(2.8rem,5vw,4.5rem);
+
+line-height:.9;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+margin-bottom:1rem;
+
+}
+
+/* ROLE */
+
+.owner-role{
+
+font-size:.75rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.55);
+
+margin-bottom:1.5rem;
+
+}
+
+/* LINE */
+
+.owner-line{
+
+width:80px;
+height:1px;
+
+background:#c9a84c;
+
+margin-bottom:1.8rem;
+
+}
+
+/* DESC */
+
+.owner-content p{
+
+font-size:.92rem;
+
+line-height:1.9;
+
+color:rgba(255,255,255,.72);
+
+max-width:450px;
+
+margin-bottom:2rem;
+
+}
+
+/* ========================= */
+/* SOCIALS */
+/* ========================= */
+
+.owner-socials{
+
+display:flex;
+gap:.8rem;
+
+}
+
+/* ICON */
+
+.owner-socials a{
+
+width:48px;
+height:48px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:1rem;
+
+text-decoration:none;
+
+color:white;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.5s ease;
+
+}
+
+/* HOVER */
+
+.owner-socials a:hover{
+
+transform:
+translateY(-5px)
+scale(1.05);
+
+background:rgba(201,168,76,.08);
+
+border-color:rgba(201,168,76,.45);
+
+box-shadow:
+0 0 25px rgba(201,168,76,.16);
+
+color:#f5d77d;
+
+}
+
+/* ========================= */
+/* IMAGE */
+/* ========================= */
+
+.owner-image{
+
+position:relative;
+
+height:500px;
+
+overflow:hidden;
+
+}
+
+/* IMAGE */
+
+.owner-image img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:
+grayscale(100%)
+brightness(.85);
+
+transition:
+transform 1.2s ease,
+filter 1s ease;
+
+}
+
+/* HOVER */
+
+.owner-item:hover .owner-image img{
+
+transform:scale(1.04);
+
+filter:
+grayscale(0%)
+brightness(.92);
+
+}
+
+/* ========================= */
+/* PROGRESS */
+/* ========================= */
+
+.owner-progress{
+
+position:absolute;
+
+left:50%;
+bottom:-25px;
+
+transform:translateX(-50%);
+
+display:flex;
+gap:.8rem;
+
+z-index:10;
+
+}
+
+/* DOT */
+
+.progress-dot{
+
+width:55px;
+height:3px;
+
+background:rgba(255,255,255,.1);
+
+border-radius:20px;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+/* ACTIVE */
+
+.progress-dot.active::before{
+
+content:'';
+
+position:absolute;
+
+left:0;
+top:0;
+
+height:100%;
+width:100%;
+
+background:#c9a84c;
+
+animation:progress 3.5s linear;
+
+}
+
+@keyframes progress{
+
+from{
+width:0%;
+}
+
+to{
+width:100%;
+}
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:1000px){
+
+.owner-container{
+
+height:auto;
+
+}
+
+.owner-item{
+
+position:relative;
+
+grid-template-columns:1fr;
+
+margin-bottom:3rem;
+
+opacity:1;
+visibility:visible;
+
+transform:none;
+
+}
+
+.owner-item.reverse{
+
+direction:ltr;
+
+}
+
+.owner-image{
+
+height:350px;
+
+}
+
+.owner-content{
+
+padding:2rem;
+
+}
+
+.owner-content h2{
+
+font-size:3rem;
+
+}
+
+.owner-progress{
+
+display:none;
+
+}
+
+}
+
+
+/* ========================= */
+/* TEAM SECTION */
+/* ========================= */
+
+.team-section{
+
+padding:120px 0;
+
+background:#050505;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* GOLD GLOW */
+
+.team-section::before{
+
+content:'';
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:rgba(201,168,76,.06);
+
+filter:blur(130px);
+
+border-radius:50%;
+
+top:-200px;
+right:-200px;
+
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.team-container{
+
+width:min(1350px,92%);
+
+margin:auto;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ========================= */
+/* HEADING */
+/* ========================= */
+
+.team-heading{
+
+text-align:center;
+
+margin-bottom:4rem;
+
+}
+
+.team-tag{
+
+display:inline-block;
+
+font-size:.75rem;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:#c9a84c;
+
+margin-bottom:1rem;
+
+}
+
+.team-heading h2{
+
+font-size:clamp(2.8rem,6vw,5.5rem);
+
+line-height:.95;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+margin-bottom:1rem;
+
+}
+
+.team-heading h2 span{
+
+color:#c9a84c;
+
+}
+
+.team-heading p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:.95rem;
+
+line-height:1.9;
+
+color:rgba(255,255,255,.62);
+
+}
+
+/* ========================= */
+/* TEAM SLIDER */
+/* ========================= */
+
+.team-slider{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:1.2rem;
+
+height:560px;
+
+position:relative;
+
+transition:1s ease;
+
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.team-card{
+
+position:relative;
+
+width:190px;
+height:238px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+flex-shrink:0;
+
+transition:
+all 1.4s cubic-bezier(.22,1,.36,1);
+
+opacity:.65;
+
+filter:
+grayscale(100%)
+brightness(.75);
+
+transform:
+scale(.82);
+
+}
+
+/* IMAGE */
+
+.team-card img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:
+transform 1.8s ease,
+filter 1.5s ease;
+
+}
+
+/* ========================= */
+/* ACTIVE CENTER */
+/* ========================= */
+
+.team-card.active{
+
+width:280px;
+height:350px;
+
+opacity:1;
+
+filter:
+grayscale(0%)
+brightness(.96);
+
+transform:
+scale(1.05);
+
+z-index:5;
+
+box-shadow:
+0 0 35px rgba(201,168,76,.18),
+0 25px 60px rgba(0,0,0,.65);
+
+}
+
+/* GOLD BORDER */
+
+.team-card.active::before{
+
+content:'';
+
+position:absolute;
+inset:0;
+
+border:1px solid rgba(201,168,76,.45);
+
+border-radius:22px;
+
+z-index:2;
+
+pointer-events:none;
+
+}
+
+/* IMAGE HOVER */
+
+.team-card:hover img{
+
+transform:scale(1.05);
+
+}
+
+/* ========================= */
+/* INFO */
+/* ========================= */
+
+.team-info{
+
+position:absolute;
+
+left:0;
+bottom:0;
+
+width:100%;
+
+padding:1.2rem;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.92),
+transparent
+);
+
+z-index:3;
+
+}
+
+/* NAME */
+
+.team-info h3{
+
+font-size:1.3rem;
+
+font-family:'Cormorant Garamond',serif;
+
+color:white;
+
+margin-bottom:.3rem;
+
+}
+
+/* ROLE */
+
+.team-info p{
+
+font-size:.62rem;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#c9a84c;
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.team-slider{
+
+gap:.6rem;
+
+height:320px;
+
+}
+
+.team-card{
+
+width:90px;
+height:120px;
+
+}
+
+.team-card.active{
+
+width:150px;
+height:210px;
+
+}
+
+.team-heading h2{
+
+font-size:3rem;
+
+}
+
+}
+
+/* ========================= */
+/* TESTIMONIALS */
+/* ========================= */
+
+.testimonial-grid{
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:2rem;
+
+}
+
+.tcard{
+
+  background:var(--d1);
+
+  padding:2.5rem;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  transition:0.3s;
+
+}
+
+.tcard:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(201,168,76,0.2);
+
+}
+
+.tstars{
+
+  color:var(--gold2);
+
+  margin-bottom:1rem;
+
+}
+
+.tcard p{
+
+  color:var(--g2);
+
+  line-height:1.8;
+
+  margin-bottom:1.5rem;
+
+}
+
+/* ========================= */
+/* WHY */
+/* ========================= */
+
+.why-grid{
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1.5rem;
+
+}
+
+.why-box{
+
+  background:var(--d1);
+
+  padding:2rem;
+
+  border-left:2px solid var(--gold);
+
+  color:var(--g2);
+
+  transition:0.3s;
+
+}
+
+.why-box:hover{
+
+  transform:translateY(-5px);
+
+  border-color:var(--gold2);
+
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-box{
+
+  background:linear-gradient(180deg,#111,#0a0a0a);
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  padding:5rem;
+
+  text-align:center;
+
+}
+
+.contact-box h2{
+
+  font-size:4rem;
+
+  margin-bottom:1.5rem;
+
+}
+
+.contact-box p{
+
+  max-width:700px;
+
+  margin:auto;
+
+  color:var(--g2);
+
+  line-height:2;
+
+  margin-bottom:2rem;
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+  border-top:1px solid rgba(255,255,255,0.05);
+
+  padding:2rem;
+
+  text-align:center;
+
+  color:var(--g3);
+
+}
+
+/* ========================= */
+/* WHATSAPP FLOAT */
+/* ========================= */
+
+.whatsapp-float{
+
+  position:fixed;
+
+  right:20px;
+  bottom:20px;
+
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:black;
+
+  font-size:1.5rem;
+
+  text-decoration:none;
+
+  z-index:999;
+
+  box-shadow:0 10px 25px rgba(201,168,76,0.25);
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:900px){
+
+  section{
+    padding:90px 0;
+  }
+
+  .hero h1,
+  .section-title h2,
+  .about-heading,
+  .contact-box h2{
+
+    font-size:3rem;
+
+  }
+
+  .services-grid,
+  .testimonial-grid,
+  .why-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .hero-btns{
+
+    flex-direction:column;
+
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-main-logo{
+    width:170px;
+  }
+
+  .contact-box{
+    padding:3rem 2rem;
+  }
+
+}
+
+.service-card-link{
+
+text-decoration:none;
+
+display:block;
+
+color:inherit;
+
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+  <div class="nav-wrap">
+
+    <a href="index.html" class="logo">
+
+      <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png"
+      alt="Expert House Design">
+
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#services">Services</a>
+
+      <a href="#about">About</a>
+
+      <a href="#testimonials">Testimonials</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+    <a href="#contact" class="btn btn-gold">
+      Enquire Now
+    </a>
+
+  </div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png"
+    alt="Expert House Design"
+    class="hero-main-logo">
+
+    <div class="hero-tag">
+
+      <span></span>
+
+      <p>
+        Luxury Architecture · Interior · Civil Design
+      </p>
+
+      <span></span>
+
+    </div>
+
+    <h1>
+
+      Crafting Landmark<br>
+
+      <em>Spaces</em><br>
+
+      With Design Excellence
+
+    </h1>
+
+    <p class="hero-desc">
+
+      From architectural planning and structural engineering to premium residential and commercial interiors,
+      Expert House Design delivers complete design solutions with creativity, precision, and technical expertise.
+
+    </p>
+
+    <div class="hero-btns">
+
+      <a href="#contact" class="btn btn-gold">
+        Start Your Project
+      </a>
+
+      <a href="#services" class="btn btn-ghost">
+        Explore Services
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SERVICES -->
+<!-- ========================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+
+<h2>Our Expertise</h2>
+
+<br>
+
+<p>
+  Crafting modern spaces with innovation, elegance, and precision.
+  </p>
+  
+
+</div>
+
+<div class="services-grid">
+
+<!-- CARD 1 -->
+
+<a href="civil.html" class="service-card-link">
+
+  <div class="service-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779445420/ChatGPT_Image_May_22_2026_03_28_49_PM.png"
+alt="Civil Architecture">
+
+<div class="service-overlay">
+
+<h3>
+Civil Architecture
+</h3>
+
+<p>
+
+Modern planning, elevations,
+structural detailing, EPD drawings,
+and premium architectural execution.
+
+</p>
+
+<div class="exp-btn">
+
+  <span></span>
+  
+  Explore Project
+  
+  </div>
+
+</div>
+
+</div>
+
+</a>
+
+<!-- CARD 2 -->
+
+<a href="interior.html" class="service-card-link">
+
+  <div class="service-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779445427/ChatGPT_Image_May_22_2026_03_28_34_PM.png"
+alt="Luxury Interiors">
+
+<div class="service-overlay">
+
+<h3>
+Luxury Interiors
+</h3>
+
+<p>
+
+Elegant residential and commercial interiors
+crafted with timeless aesthetics and cinematic atmosphere.
+
+</p>
+
+<div class="exp-btn">
+
+<span></span>
+
+Explore Project
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- ========================= -->
+
+
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+<!-- HUGE BG TEXT -->
+
+<div class="about-bg-text">
+
+EHD
+
+</div>
+
+<!-- TAG -->
+
+<div class="about-tag">
+
+ABOUT
+
+</div>
+
+<!-- HEADING -->
+
+<h2 class="about-heading">
+
+About Expert House<br>
+
+<span>Design</span>
+
+</h2>
+
+<!-- DESCRIPTION -->
+
+<p class="about-description">
+
+Expert House Design is a premium
+architecture and interior design studio
+focused on creating elegant residential
+and commercial spaces.
+
+We blend modern architecture,
+luxury aesthetics, and functional
+planning into every project we create
+to craft timeless spaces that inspire.
+
+</p>
+
+<!-- BUTTON -->
+
+<a href="#services"
+class="about-btn">
+
+Explore Our Work
+
+<span></span>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- OWNER SECTION -->
+<!-- ========================= -->
+
+<section class="owner-section" id="owner">
+
+<div class="owner-container">
+
+<!-- OWNER 1 -->
+
+<div class="owner-item active">
+
+<div class="owner-content">
+
+<div class="owner-tag">
+Founder & Visionary
+</div>
+
+<h2>
+Abhisek
+xyz
+</h2>
+
+<div class="owner-role">
+Creative Director
+</div>
+
+<div class="owner-line"></div>
+
+<p>
+
+Architecture should create emotion,
+atmosphere, and timeless luxury.
+Every project is designed to feel
+immersive and unforgettable.
+
+</p>
+
+<div class="owner-socials">
+
+<a href="#">
+<i class="ri-instagram-line"></i>
+</a>
+
+<a href="#">
+<i class="ri-linkedin-fill"></i>
+</a>
+
+<a href="#">
+<i class="ri-twitter-x-line"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="owner-image">
+
+<img
+src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+alt="Owner">
+
+</div>
+
+</div>
+
+<!-- OWNER 2 -->
+
+<div class="owner-item reverse">
+
+<div class="owner-content">
+
+<div class="owner-tag">
+Principal Architect
+</div>
+
+<h2>
+Rohan
+Sharma
+</h2>
+
+<div class="owner-role">
+Architecture Head
+</div>
+
+<div class="owner-line"></div>
+
+<p>
+
+Luxury spaces are designed
+to feel elegant, timeless,
+and emotionally immersive.
+
+</p>
+
+<div class="owner-socials">
+
+<a href="#">
+<i class="ri-instagram-line"></i>
+</a>
+
+<a href="#">
+<i class="ri-linkedin-fill"></i>
+</a>
+
+<a href="#">
+<i class="ri-twitter-x-line"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="owner-image">
+
+<img
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop"
+alt="Owner">
+
+</div>
+
+</div>
+
+<!-- OWNER 3 -->
+
+<div class="owner-item">
+
+<div class="owner-content">
+
+<div class="owner-tag">
+Visualization Director
+</div>
+
+<h2>
+Vivek
+Sharma
+</h2>
+
+<div class="owner-role">
+Creative Visualization Lead
+</div>
+
+<div class="owner-line"></div>
+
+<p>
+
+We transform concepts into
+cinematic architectural
+experiences through storytelling.
+
+</p>
+
+<div class="owner-socials">
+
+<a href="#">
+<i class="ri-instagram-line"></i>
+</a>
+
+<a href="#">
+<i class="ri-linkedin-fill"></i>
+</a>
+
+<a href="#">
+<i class="ri-twitter-x-line"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="owner-image">
+
+<img
+src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=1200&auto=format&fit=crop"
+alt="Owner">
+
+</div>
+
+</div>
+
+<!-- PROGRESS -->
+
+<div class="owner-progress">
+
+<div class="progress-dot active"></div>
+
+<div class="progress-dot"></div>
+
+<div class="progress-dot"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- TEAM SECTION -->
+<!-- ========================= -->
+
+<section class="team-section" id="team">
+
+<div class="team-container">
+
+<!-- HEADING -->
+
+<div class="team-heading">
+
+<div class="team-tag">
+
+OUR TEAM
+
+</div>
+
+<h2>
+
+Meet The Minds<br>
+
+Behind The <span>Masterpieces</span>
+
+</h2>
+
+<p>
+
+A passionate team of architects,
+designers, and creative visionaries
+crafting timeless spaces with precision,
+luxury, and cinematic storytelling.
+
+</p>
+
+</div>
+
+<!-- TEAM SLIDER -->
+
+<div class="team-slider"
+id="teamSlider">
+
+<!-- CARD 1 -->
+
+<div class="team-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779516567/189.jpg"
+alt="Team">
+
+<div class="team-info">
+
+<h3>
+Rashmi Badole
+</h3>
+
+<p>
+Team Leader Interior
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="team-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779516567/191.jpg"
+alt="Team">
+
+<div class="team-info">
+
+<h3>
+Arman Pathan
+</h3>
+
+<p>
+Technical Manager
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="team-card active">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779516568/193.jpg"
+alt="Team">
+
+<div class="team-info">
+
+<h3>
+Diya Vyas
+</h3>
+
+<p>
+Human Resource
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="team-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779516567/192.jpg"
+alt="Team">
+
+<div class="team-info">
+
+<h3>
+Neeraj Tripathi
+</h3>
+
+<p>
+Manager
+</p>
+
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="team-card">
+
+<img
+src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779516568/190.jpg"
+alt="Team">
+
+<div class="team-info">
+
+<h3>
+Jaya Patidar
+</h3>
+
+<p>
+Team Leader Interior
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TESTIMONIALS -->
+<!-- ========================= -->
+
+<section id="testimonials">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Client Testimonials
+      </h2>
+
+      <p>
+        Trusted by clients for quality and precision.
+      </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+      <div class="tcard">
+
+        <div class="tstars">
+          ★★★★★
+        </div>
+
+        <p>
+
+          Amazing elevation design and planning
+          support with premium execution quality.
+
+        </p>
+
+        <h4>
+          Residential Client
+        </h4>
+
+      </div>
+
+      <div class="tcard">
+
+        <div class="tstars">
+          ★★★★★
+        </div>
+
+        <p>
+
+          Beautiful office interiors with luxury
+          detailing and professional finishing.
+
+        </p>
+
+        <h4>
+          Commercial Client
+        </h4>
+
+      </div>
+
+      <div class="tcard">
+
+        <div class="tstars">
+          ★★★★★
+        </div>
+
+        <p>
+
+          Smooth communication, timely delivery,
+          and highly professional service.
+
+        </p>
+
+        <h4>
+          Interior Client
+        </h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WHY CHOOSE -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>
+        Why Choose Us
+      </h2>
+
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-box">
+        01 → Modern Architectural Vision
+      </div>
+
+      <div class="why-box">
+        02 → Premium Interior Experience
+      </div>
+
+      <div class="why-box">
+        03 → Structural Precision
+      </div>
+
+      <div class="why-box">
+        04 → Personalized Design Approach
+      </div>
+
+      <div class="why-box">
+        05 → Transparent Communication
+      </div>
+
+      <div class="why-box">
+        06 → Timely Project Delivery
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact-box">
+
+      <h2>
+
+        Let's Create Your<br>
+
+        <em style="color:var(--gold2);font-style:normal;">
+          Dream Space
+        </em>
+
+      </h2>
+
+      <p>
+
+        Ready to transform your residential
+        or commercial project with premium
+        architecture and interior solutions?
+
+      </p>
+
+      <a href="https://wa.me/919109404905"
+      class="btn btn-gold">
+
+        Start Project on WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+  © 2026 Expert House Design · All Rights Reserved
+
+</footer>
+
+<!-- ========================= -->
+<!-- WHATSAPP FLOAT -->
+<!-- ========================= -->
+
+<a href="https://wa.me/919109404905"
+class="whatsapp-float">
+
+  ✆
+
+</a>
+
+<script>
+
+if(typeof gsap!=="undefined"&&typeof ScrollTrigger!=="undefined"){
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".service-card").forEach((card,i)=>{
+
+gsap.from(card,{
+
+scrollTrigger:{
+trigger:card,
+start:"top 85%",
+toggleActions:"play none none none",
+},
+
+opacity:0,
+y:100,
+duration:1.4,
+delay:i * .15,
+ease:"power3.out"
+
+});
+
+});
+
+ScrollTrigger.refresh();
+
+}else{
+
+document.querySelectorAll(".service-card").forEach((card)=>{
+card.style.opacity="1";
+card.style.transform="none";
+});
+
+}
+
+document.querySelectorAll(".service-card").forEach((card)=>{
+
+const img=card.querySelector("img");
+if(!img)return;
+
+card.addEventListener("mousemove",(e)=>{
+
+const rect=card.getBoundingClientRect();
+
+const x=e.clientX - rect.left;
+const y=e.clientY - rect.top;
+
+const moveX=(x - rect.width/2)/25;
+const moveY=(y - rect.height/2)/25;
+
+img.style.transform=
+`scale(1.08) translate(${moveX}px,${moveY}px)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+img.style.transform="";
+
+});
+
+});
+
+const ownerItems =
+document.querySelectorAll(".owner-item");
+
+const progressDots =
+document.querySelectorAll(".progress-dot");
+
+let currentOwner = 0;
+
+function changeOwner(){
+
+ownerItems[currentOwner]
+.classList.remove("active");
+
+progressDots[currentOwner]
+.classList.remove("active");
+
+currentOwner++;
+
+if(currentOwner >= ownerItems.length){
+
+currentOwner = 0;
+
+}
+
+ownerItems[currentOwner]
+.classList.add("active");
+
+progressDots[currentOwner]
+.classList.add("active");
+
+}
+
+/* AUTO CHANGE */
+
+setInterval(changeOwner,3500);
+
+
+/* ========================= */
+/* TEAM CAROUSEL */
+/* ========================= */
+
+const slider =
+document.getElementById("teamSlider");
+
+/* MOVE FUNCTION */
+
+function moveCards(){
+
+const cards =
+document.querySelectorAll(".team-card");
+
+/* REMOVE ACTIVE */
+
+cards.forEach(card=>{
+
+card.classList.remove("active");
+
+});
+
+/* SMOOTH SHIFT */
+
+slider.style.transform =
+"translateX(-60px)";
+
+setTimeout(()=>{
+
+/* MOVE FIRST CARD */
+
+slider.appendChild(cards[0]);
+
+/* RESET POSITION */
+
+slider.style.transition =
+"none";
+
+slider.style.transform =
+"translateX(0px)";
+
+/* FORCE REFLOW */
+
+slider.offsetHeight;
+
+/* ENABLE TRANSITION */
+
+slider.style.transition =
+"1.2s cubic-bezier(.22,1,.36,1)";
+
+/* NEW CENTER ACTIVE */
+
+const updatedCards =
+document.querySelectorAll(".team-card");
+
+updatedCards[2]
+.classList.add("active");
+
+},600);
+
+}
+
+/* FIRST ACTIVE */
+
+document.querySelectorAll(".team-card")[2]
+.classList.add("active");
+
+/* AUTO MOVE */
+
+setInterval(moveCards,3200);
+
+</script>
+
+</body>
+</html>

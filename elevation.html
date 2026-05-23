@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elevation Design Projects | Expert House Design</title>
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- SWIPER -->
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<style>
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+:root{
+
+--gold:#c9a84c;
+--gold2:#f5d77d;
+
+--dark:#050505;
+--d1:#111111;
+
+--g1:#ffffff;
+--g2:#cfcfcf;
+--g3:#8a8a8a;
+
+--font-display:'Cormorant Garamond',serif;
+
+}
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#000;
+color:#fff;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+body::before{
+
+content:'';
+
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at top right,rgba(201,168,76,0.05),transparent 35%),
+radial-gradient(circle at bottom left,rgba(201,168,76,0.04),transparent 30%);
+
+z-index:-1;
+
+}
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+.container{
+width:min(1200px,90%);
+margin:auto;
+}
+
+section{
+padding:110px 0;
+}
+
+h1,h2,h3,h4{
+font-family:var(--font-display);
+}
+
+img{
+width:100%;
+display:block;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+
+z-index:999;
+
+background:rgba(0,0,0,0.45);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,0.05);
+
+}
+
+.nav-wrap{
+
+width:min(1200px,90%);
+margin:auto;
+
+height:85px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+
+.logo img{
+width:75px;
+}
+
+.nav-links{
+display:flex;
+gap:2rem;
+}
+
+.nav-links a{
+
+color:var(--g2);
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+.nav-links a:hover{
+color:var(--gold2);
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:16px 38px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+transition:0.35s;
+
+font-weight:600;
+
+}
+
+.btn-gold{
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+color:black;
+
+}
+
+.btn-outline{
+
+border:1px solid rgba(255,255,255,0.1);
+
+color:white;
+
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+min-height:75vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+.hero .container{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+.hero-logo{
+
+width:180px;
+
+margin-bottom:2rem;
+
+}
+
+.hero-tag{
+
+display:flex;
+align-items:center;
+gap:1rem;
+
+margin-bottom:2rem;
+
+}
+
+.hero-tag span{
+
+width:60px;
+height:1px;
+
+background:var(--gold);
+
+}
+
+.hero-tag p{
+
+color:var(--gold2);
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-size:0.8rem;
+
+}
+
+.hero h1{
+
+font-size:5rem;
+
+line-height:0.95;
+
+margin-bottom:1.5rem;
+
+}
+
+.hero h1 em{
+
+color:var(--gold2);
+
+font-style:normal;
+
+}
+
+.hero-desc{
+
+max-width:720px;
+
+color:var(--g2);
+
+line-height:1.9;
+
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:5rem;
+
+}
+
+.section-title h2{
+
+font-size:4rem;
+
+margin-bottom:1rem;
+
+}
+
+.section-title p{
+
+color:var(--g3);
+
+line-height:1.8;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+/* ========================= */
+/* PDF GRID */
+/* ========================= */
+
+.pdf-grid{
+
+display:flex;
+justify-content:center;
+
+margin-bottom:6rem;
+
+}
+
+/* ========================= */
+/* PDF CARD */
+/* ========================= */
+
+.pdf-card{
+
+max-width:850px;
+width:100%;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,0.05),
+rgba(255,255,255,0.02)
+);
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:28px;
+
+overflow:hidden;
+
+transition:0.5s;
+
+position:relative;
+
+}
+
+.pdf-card:hover{
+
+transform:
+translateY(-12px)
+scale(1.01);
+
+border-color:
+rgba(201,168,76,0.35);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,0.5),
+0 0 60px rgba(201,168,76,0.12);
+
+}
+
+/* ========================= */
+/* PROJECT TAG */
+/* ========================= */
+
+.project-tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+border:1px solid rgba(201,168,76,0.3);
+
+color:var(--gold2);
+
+margin-bottom:1.5rem;
+
+font-size:0.85rem;
+
+letter-spacing:1px;
+
+}
+
+/* ========================= */
+/* SWIPER */
+/* ========================= */
+
+.swiper{
+
+width:100%;
+height:420px;
+
+border-radius:22px;
+
+overflow:hidden;
+
+}
+
+.swiper-slide img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:0.6s;
+
+}
+
+.swiper-slide img:hover{
+
+transform:scale(1.03);
+
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+color:white;
+}
+
+.swiper-pagination-bullet{
+background:white;
+}
+
+.swiper-pagination-bullet-active{
+background:var(--gold);
+}
+
+/* ========================= */
+/* PDF CONTENT */
+/* ========================= */
+
+.pdf-content{
+
+padding:2.8rem;
+
+text-align:center;
+
+}
+
+.pdf-content h3{
+
+font-size:2.8rem;
+
+margin-bottom:1rem;
+
+}
+
+.pdf-content p{
+
+color:var(--g2);
+
+line-height:1.9;
+
+margin-bottom:2rem;
+
+}
+
+.btn-group{
+
+display:flex;
+justify-content:center;
+gap:1rem;
+
+flex-wrap:wrap;
+
+}
+
+/* ========================= */
+/* VIDEO SECTION */
+/* ========================= */
+
+.video-wrapper{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.5);
+
+}
+
+.video-wrapper video{
+
+width:100%;
+
+display:block;
+
+border-radius:22px;
+
+object-fit:cover;
+
+}
+
+/* PLAY BUTTON */
+
+.play-btn{
+
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:clamp(55px,8vw,90px);
+height:clamp(55px,8vw,90px);
+
+border-radius:50%;
+
+background:rgba(201,168,76,0.92);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:clamp(1.3rem,3vw,2.2rem);
+
+color:black;
+
+z-index:5;
+
+cursor:pointer;
+
+transition:0.4s;
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.4);
+
+}
+
+.play-btn:hover{
+
+transform:
+translate(-50%,-50%)
+scale(1.1);
+
+background:var(--gold2);
+
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.cta-box{
+
+background:var(--d1);
+
+padding:5rem;
+
+text-align:center;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+}
+
+.cta-box h2{
+
+font-size:4rem;
+
+margin-bottom:1.5rem;
+
+}
+
+.cta-box p{
+
+max-width:700px;
+
+margin:auto;
+
+color:var(--g2);
+
+line-height:2;
+
+margin-bottom:2rem;
+
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+padding:2rem;
+
+text-align:center;
+
+color:var(--g3);
+
+border-top:1px solid rgba(255,255,255,0.05);
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:1000px){
+
+.hero h1,
+.section-title h2,
+.cta-box h2{
+
+font-size:3rem;
+
+}
+
+.swiper{
+height:320px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero-logo{
+width:140px;
+}
+
+.pdf-content h3{
+font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+<div class="nav-wrap">
+
+<a href="expert_house.html" class="logo">
+
+<img src="https://experthousedesign.com/assets/logo-D9lMwTyw.png">
+
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+
+<a href="civil.html">Civil</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<a href="#contact" class="btn btn-gold">
+
+Enquire Now
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<img src="https://experthousedesign.com/assets/logo-D9lMwTyw.png"
+class="hero-logo">
+
+<div class="hero-tag">
+
+<span></span>
+
+<p>2D Elevation Design</p>
+
+<span></span>
+
+</div>
+
+<h1>
+
+Luxury Modern<br>
+
+<em>2D Elevation Concepts</em>
+
+</h1>
+
+<p class="hero-desc">
+
+Explore premium 2D elevation layouts
+crafted with modern architecture,
+luxury aesthetics, and structural precision.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PDF SECTION -->
+<!-- ========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>2D Elevation Drawings</h2>
+
+<p>
+
+Professional architectural elevation
+PDF layouts for modern residential projects.
+
+</p>
+
+</div>
+
+<div class="pdf-grid">
+
+<div class="pdf-card">
+
+<!-- PDF IMAGE SLIDER -->
+
+<div class="swiper pdfSwiper">
+
+<div class="swiper-wrapper">
+
+<!-- IMAGE 1 -->
+
+<div class="swiper-slide">
+
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779364878/Bhawani_Sir_2D_Material_Details_Front_View_12-05_1__page-0001.jpg"
+alt="Structural PDF Preview">
+
+</div>
+
+<!-- IMAGE 2 -->
+
+<div class="swiper-slide">
+
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779364868/Bhawani_Sir_2D_Working_Details_Front_View_12-05_1__page-0001.jpg"
+alt="Structural PDF Preview">
+
+</div>
+
+</div>
+
+<div class="swiper-pagination"></div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="pdf-content">
+
+<div class="project-tag">
+
+Premium Structural Planning
+
+</div>
+
+<h3>
+
+Advanced Residential Structural Project
+
+</h3>
+
+<p>
+
+Modern residential structural
+engineering project crafted with
+advanced load planning,
+beam detailing,
+and execution precision.
+
+</p>
+
+<div class="btn-group">
+
+<a href="https://drive.google.com/file/d/1iACx3zfUV3Sd96ZOJtYv0M0_yK-gPayt/view?usp=drive_link"
+target="_blank"
+class="btn btn-gold">
+
+View Drawing
+
+</a>
+
+<a href="https://drive.google.com/uc?export=download&id=1iACx3zfUV3Sd96ZOJtYv0M0_yK-gPayt"
+class="btn btn-outline">
+
+Download
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- ELEVATION GALLERY -->
+<!-- ========================= -->
+
+<div class="section-title">
+
+<h2>Elevation Gallery</h2>
+
+<p>
+
+Modern luxury elevation concepts
+crafted for premium architectural experiences.
+
+</p>
+
+</div>
+
+<div class="swiper elevationSwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778664035/WhatsApp_Image_2026-05-12_at_15.45.39.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778664035/WhatsApp_Image_2026-05-12_at_15.46.00.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778664035/WhatsApp_Image_2026-05-11_at_12.32.29.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778664035/WhatsApp_Image_2026-05-11_at_12.32.29_1.jpg">
+</div>
+
+</div>
+
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- VIDEO SECTION -->
+<!-- ========================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+Elevation Walkthrough
+
+</h2>
+
+<p>
+
+Experience cinematic modern elevation
+design presentation through walkthrough visuals.
+
+</p>
+
+</div>
+
+<div class="video-wrapper">
+
+<div class="play-btn">
+
+▶
+
+</div>
+
+<video
+controls
+poster="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779361975/Untitled_design_5.jpg">
+
+<source
+src="https://res.cloudinary.com/dc5thzlfx/video/upload/v1779358728/elevaction_video.mp4"
+type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+
+Let's Design Your<br>
+
+<em style="color:var(--gold2);font-style:normal;">
+Dream Elevation
+</em>
+
+</h2>
+
+<p>
+
+Transform your architectural vision
+with premium elevation concepts
+crafted by Expert House Design.
+
+</p>
+
+<a href="https://wa.me/919109404905"
+class="btn btn-gold">
+
+Start Project on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+© 2026 Expert House Design · All Rights Reserved
+
+</footer>
+
+<!-- SWIPER JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+/* PDF SWIPER */
+
+new Swiper(".pdfSwiper",{
+
+loop:true,
+
+spaceBetween:20,
+
+autoplay:{
+delay:2500,
+disableOnInteraction:false,
+},
+
+pagination:{
+el:".pdfSwiper .swiper-pagination",
+clickable:true,
+},
+
+});
+
+/* ELEVATION GALLERY */
+
+new Swiper(".elevationSwiper",{
+
+loop:true,
+
+spaceBetween:20,
+
+autoplay:{
+delay:3000,
+disableOnInteraction:false,
+},
+
+pagination:{
+el:".swiper-pagination",
+clickable:true,
+},
+
+navigation:{
+nextEl:".swiper-button-next",
+prevEl:".swiper-button-prev",
+},
+
+});
+
+/* VIDEO */
+
+const video = document.querySelector(".video-wrapper video");
+
+const playBtn = document.querySelector(".play-btn");
+
+playBtn.addEventListener("click",()=>{
+
+video.play();
+
+playBtn.style.display="none";
+
+});
+
+video.addEventListener("pause",()=>{
+
+playBtn.style.display="flex";
+
+});
+
+video.addEventListener("play",()=>{
+
+playBtn.style.display="none";
+
+});
+
+</script>
+
+</body>
+</html>

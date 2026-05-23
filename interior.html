@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luxury Interior Design | Expert House Design</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ========================= */
+/* ROOT */
+/* ========================= */
+
+:root{
+  --gold:#c9a84c;
+  --gold2:#f5d77d;
+
+  --dark:#050505;
+  --d1:#111111;
+
+  --g1:#ffffff;
+  --g2:#cfcfcf;
+  --g3:#8a8a8a;
+
+  --font-display:'Cormorant Garamond',serif;
+}
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#000;
+  color:white;
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+/* ========================= */
+/* BACKGROUND */
+/* ========================= */
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,rgba(201,168,76,0.05),transparent 35%),
+  radial-gradient(circle at bottom left,rgba(201,168,76,0.04),transparent 30%);
+
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+.container{
+  width:min(1200px,90%);
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:999;
+
+  background:rgba(0,0,0,0.45);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.nav-wrap{
+  width:min(1200px,90%);
+  margin:auto;
+
+  height:85px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo img{
+  width:75px;
+}
+
+.nav-links{
+  display:flex;
+  gap:2rem;
+}
+
+.nav-links a{
+  color:var(--g2);
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 30px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+  color:black;
+
+  font-weight:700;
+}
+
+.btn-gold:hover{
+  transform:translateY(-4px);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+  min-height:80vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding-top:120px;
+  padding-bottom:40px;
+}
+
+.hero .container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.hero-logo{
+  width:200px;
+
+  margin-bottom:2rem;
+}
+
+.hero-tag{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+
+  margin-bottom:2rem;
+}
+
+.hero-tag span{
+  width:60px;
+  height:1px;
+
+  background:var(--gold);
+}
+
+.hero-tag p{
+  color:var(--gold2);
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-size:0.8rem;
+}
+
+.hero h1{
+  font-size:5rem;
+  line-height:0.95;
+
+  margin-bottom:1.5rem;
+}
+
+.hero h1 em{
+  color:var(--gold2);
+  font-style:normal;
+}
+
+.hero-desc{
+  max-width:650px;
+
+  color:var(--g2);
+
+  line-height:1.8;
+
+  font-size:1.05rem;
+}
+
+.hero-btns{
+  display:flex;
+  gap:1rem;
+
+  margin-top:2rem;
+}
+
+/* ========================= */
+/* SECTION TITLE */
+/* ========================= */
+
+.section-title{
+  text-align:center;
+
+  margin-bottom:5rem;
+}
+
+.section-title h2{
+  font-size:4rem;
+
+  margin-bottom:1rem;
+}
+
+.section-title p{
+  color:var(--g3);
+
+  line-height:1.8;
+}
+
+/* ========================= */
+/* INTERIOR GRID */
+/* ========================= */
+
+.interior-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:2rem;
+}
+
+.interior-card{
+  background:var(--d1);
+
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  transition:0.4s;
+}
+
+.interior-card:hover{
+  transform:translateY(-8px);
+
+  border-color:rgba(201,168,76,0.3);
+}
+
+.interior-card img{
+  width:100%;
+  height:420px;
+
+  object-fit:cover;
+}
+
+.interior-content{
+  padding:3rem;
+
+  text-align:center;
+}
+
+.interior-content h3{
+  font-size:2.5rem;
+
+  margin-bottom:1rem;
+}
+
+.interior-content p{
+  color:var(--g2);
+
+  line-height:1.9;
+
+  margin-bottom:2rem;
+}
+
+/* ========================= */
+/* CTA */
+/* ========================= */
+
+.cta-box{
+  background:var(--d1);
+
+  padding:5rem;
+
+  text-align:center;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.cta-box h2{
+  font-size:4rem;
+
+  margin-bottom:1.5rem;
+}
+
+.cta-box p{
+  max-width:700px;
+
+  margin:auto;
+
+  color:var(--g2);
+
+  line-height:2;
+
+  margin-bottom:2rem;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+  padding:2rem;
+
+  text-align:center;
+
+  color:var(--g3);
+
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:900px){
+
+  .hero h1,
+  .section-title h2,
+  .cta-box h2{
+    font-size:3rem;
+  }
+
+  .interior-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero-btns{
+    flex-direction:column;
+  }
+
+  .hero-logo{
+    width:150px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav>
+
+  <div class="nav-wrap">
+
+    <a href="index.html" class="logo">
+
+      <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png"
+      alt="Expert House Design">
+
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="#">Services</a>
+
+      <a href="#">Projects</a>
+
+      <a href="#">Contact</a>
+
+    </div>
+
+    <a href="#contact" class="btn btn-gold">
+      Enquire Now
+    </a>
+
+  </div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1778493494/expert_logo.png"
+    alt="Expert House Design"
+    class="hero-logo">
+
+    <div class="hero-tag">
+
+      <span></span>
+
+      <p>Luxury Interior Design</p>
+
+      <span></span>
+
+    </div>
+
+    <h1>
+
+      Designing Interiors<br>
+
+      That <em>Reflect Style & Functionality</em>
+
+    </h1>
+
+    <p class="hero-desc">
+
+      Expert House Design creates modern residential and commercial interior spaces with smart layouts, elegant aesthetics, customized concepts, and functional design solutions tailored to every lifestyle and business need.
+
+    </p>
+
+    <div class="hero-btns">
+
+      <a href="#contact" class="btn btn-gold">
+        Start Your Project
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- INTERIOR SERVICES -->
+<!-- ========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Interior Solutions</h2>
+
+      <p>
+
+        Premium residential and commercial interior
+        experiences crafted with luxury and precision.
+
+      </p>
+
+    </div>
+
+    <div class="interior-grid">
+
+      <!-- RESIDENTIAL -->
+
+      <div class="interior-card">
+
+        <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779344716/ehpd_com.png"
+        alt="Residential Interior">
+
+        <div class="interior-content">
+
+          <h3>Residential Interior</h3>
+
+          <p>
+
+            Luxury residential interiors designed with smart space planning, modular concepts, false ceiling, lighting design, customized furniture, and modern aesthetic styling for comfortable living.
+
+          </p>
+
+          <a href="residential_projects.html" class="btn btn-gold">
+            Explore Design
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- COMMERCIAL -->
+
+      <div class="interior-card">
+
+        <img src="https://res.cloudinary.com/dc5thzlfx/image/upload/v1779344836/ehpd_ca.png"
+        alt="Commercial Interior">
+
+        <div class="interior-content">
+
+          <h3>Commercial Interior</h3>
+
+          <p>
+
+            Professional commercial interiors designed for offices, showrooms, retail shops, cafes, and workspaces with modern layouts, branding aesthetics, and functional space planning.
+
+          </p>
+
+          <a href="commercial_projects.html" class="btn btn-gold">
+            Explore Design
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <h2>
+
+        Let's Design Your<br>
+
+        <em style="color:var(--gold2);font-style:normal;">
+          Dream Interior
+        </em>
+
+      </h2>
+
+      <p>
+
+        Transform your residential or commercial
+        space with premium interior solutions
+        crafted for luxury and modern elegance.
+
+      </p>
+
+      <a href="https://wa.me/919109404905"
+      class="btn btn-gold">
+
+        Start Project on WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+  © 2026 Expert House Design · All Rights Reserved
+
+</footer>
+
+</body>
+</html>
